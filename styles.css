@@ -74,8 +74,13 @@ p{
     padding: 10px;
     color: rgba(255,255,255,.56);
 }
+
 .header__menu li a{
     color: rgba(255,255,255,.56);
+}
+
+.header__menu li a:hover{
+    color:#808000;
 }
 li{
     list-style-type: none;
@@ -124,7 +129,8 @@ a{
     margin: 20px;
 }
 .boton1:hover{
-    border: 3px solid red;
+    background-color: #808000;
+    transition: background-color 1s;
 }
 .footer{
     background-color:#1a1918;
@@ -209,5 +215,83 @@ a{
     }
     .tall{
         grid-row: span 2;
+    }
+}
+
+.formularioContacto{
+    display: flex;
+    width: 600px;
+    height:600px;
+    padding: 30px;
+    margin:auto;
+    height: 75vh; 
+}
+
+.formularioContacto__form{
+    display: flex; 
+    flex-flow: column; 
+    position: relative;
+    left: 150px;
+    top: 250px;
+}
+
+#backgroundContacto{
+    background-color: #f2ede6;
+}
+
+.formularioContacto{
+    display: flex;
+    padding: 30px;
+    margin:auto;
+    height: 75vh; 
+}
+
+.formularioContacto__form{
+    display: flex; 
+    flex-flow: column; 
+    position: relative;
+    left: 150px;
+    top: 250px;
+    width: 300px;
+}
+
+#backgroundContacto{
+    background-color: #f2ede6;
+}
+
+.mainContenedorChef img{
+    animation-name: moverImagen;
+    animation-duration: 3S;
+}
+
+@keyframes moverImagen{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(20%);
+    }
+}
+
+.tituloPortada{
+    color: #1a1918;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position:relative;
+    animation-name: moverTitulo;
+    animation-duration: 3s;
+}
+
+@keyframes moverTitulo{
+    0%{
+        margin-bottom: -30px;
+    }
+    30%{
+        letter-spacing: 25px;
+    }
+    85%{
+        letter-spacing: 8px;
     }
 }
