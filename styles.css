@@ -2,12 +2,14 @@
 .body{
     margin: 0;
     box-sizing: border-box;
+    background-color: aliceblue;
 }
 
 p{
     font-size: 16px;
 }
-.grid-containerIndex{
+
+/*.grid-containerIndex{
     display: grid;
     background-color:#f2ede6;
     grid-template-columns: 300px auto 100px;
@@ -42,7 +44,7 @@ p{
 .footer{
     grid-area: footer;
 }
-
+*/
 .header, .navegacion, .main, .articulo, .footer{
     padding: 1em 2em;
 }
@@ -53,13 +55,16 @@ p{
 }
 
 .header {
+    display: flex;
+    position: sticky;
+    align-items: center;
     background-color: black;
     color: #7B7B7B;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 10;
 }
 
 .navegacion {
-    display: flex;
     align-items: center;
     background: black;
     color: #7B7B7B;
@@ -93,7 +98,7 @@ a{
     position: absolute;
 }
 .header__submenu li{
-    display: block;
+    display:block;
     background-color: black;
 }
 .header__menu li:hover .header__submenu{
@@ -105,17 +110,14 @@ a{
     align-items: center;
 }
 
-.contenedorImagenChef{
-    width: 60%;
-    height: 40%;
-    display: inline-flex;
-}
 .imagenChef{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
 }
 .tituloPortada{
+    margin-top: 40px;
+    text-align: center;
     color: black;
 }
 .boton1{
@@ -138,7 +140,7 @@ a{
 }
 
 /*TAMAÑO TABLET INDEX*/
-@media screen and(max-width:768px){
+/*@media screen and(max-width:768px){
     .grid-containerIndex{
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
@@ -148,8 +150,9 @@ a{
         "footer footer";
     } 
 }
+*/
 /*TAMAÑO CELULAR INDEX*/
-@media screen and(max-width:500px){
+/*@media screen and(max-width:500px){
     .grid-containerIndex{
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -162,8 +165,8 @@ a{
         flex-direction: column;
     }
 }
-
-.grid-containerHeader{
+*/
+/*.grid-containerHeader{
     display: grid;
     grid-template-columns: 300px auto 100px;
     grid-template-rows: 82px;
@@ -182,24 +185,26 @@ a{
     justify-content: center;
     text-align: center;
 }
+*/
 .bodyCatering{
-    background-color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
+    color: black;
 }
 
 .grid-item{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: white;
     transition: transform 0.3s ease-in-out;
 }
 .grid-item:hover{
     filter: opacity(0.9);
     transform: scale(1.04);
 }
-
+.grid-item img{
+    width: 100%;
+}
 .grid-containerGaleria{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -221,22 +226,17 @@ a{
 .formularioContacto{
     display: flex;
     width: 600px;
-    height:600px;
-    padding: 30px;
+    height:100vh;
+    padding:50px;
     margin:auto;
-    height: 75vh; 
 }
 
-.formularioContacto__form{
+/*.formularioContacto__form{
     display: flex; 
     flex-flow: column; 
     position: relative;
     left: 150px;
     top: 250px;
-}
-
-#backgroundContacto{
-    background-color: #f2ede6;
 }
 
 .formularioContacto{
@@ -251,13 +251,9 @@ a{
     flex-flow: column; 
     position: relative;
     left: 150px;
-    top: 250px;
+    top: 100px;
     width: 300px;
-}
-
-#backgroundContacto{
-    background-color: #f2ede6;
-}
+}*/
 
 .mainContenedorChef img{
     animation-name: moverImagen;
@@ -294,4 +290,42 @@ a{
     85%{
         letter-spacing: 8px;
     }
+}
+.boton2{
+    background-color: #1a1918;
+    color:white;
+    width: 160px;
+    margin: 10px;
+
+}
+
+.boton2:hover{
+    background-color: #808000;
+    transition: background-color 1s;
+}
+
+.tituloContactate{
+    font-size: 80px;
+    padding: 10px;
+}
+
+.tituloSolicitud{
+    color: #808000;
+    font-size: 50px;
+}
+
+.input-group-text{
+    background-color:white;
+}
+
+@media screen and (max-width: 500px) and (min-width: 100px){
+    .tituloContactate{
+        font-size: 30px;
+        text-align: center;
+    }
+    .tituloSolicitud{
+        font-size: 25px;
+        text-align: center;
+    }
+    
 }
