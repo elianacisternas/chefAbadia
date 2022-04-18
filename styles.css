@@ -7,6 +7,9 @@
 
 p{
     font-size: 16px;
+    text-align: justify;
+    padding: 10px;
+    margin: 10px;
 }
 
 /*.grid-containerIndex{
@@ -125,8 +128,8 @@ a{
     color: white;
     display: inline-block;
     position: relative;
-    width: 200px;
-    height: 30px;
+    width: 180px;
+    height: 25px;
     padding: 1.875em;
     margin: 20px;
 }
@@ -186,10 +189,6 @@ a{
     text-align: center;
 }
 */
-.bodyCatering{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
-}
 
 .grid-item{
     display: flex;
@@ -257,7 +256,7 @@ a{
 
 .mainContenedorChef img{
     animation-name: moverImagen;
-    animation-duration: 3S;
+    animation-duration: 3s;
 }
 
 @keyframes moverImagen{
@@ -265,9 +264,9 @@ a{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(20%);
+        transform: translateX(4%);
     }
-}
+} 
 
 .tituloPortada{
     color: #1a1918;
@@ -328,4 +327,33 @@ a{
         text-align: center;
     }
     
+}
+
+.fotoChef2{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: inline-block;
+    padding: 20px;
+}
+
+.parrafoChef{
+    padding: 20px;
+}
+
+.mainContenedorChef div h2{
+    font-size: 80px; 
+    text-align: left;
+    animation-name: moverTitulo2;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    color:#808000;
+}
+
+@keyframes moverTitulo2{
+    0%{
+        transform: scale(.1);
+        color: #1a1918;
+        transform: rotateX(120deg);
+    }
 }
