@@ -1,3 +1,53 @@
 $colorPrincipal:aliceblue;
 $colorsecundario:#1a1918;
 $colorsecundario2: #808000;
+
+
+$titulos: (
+    h1: 4em,
+    h2: 3em,
+    h3: 2em,
+    h4: 1em,
+    h5: 0.75em,
+    h6: 0.35em,
+);
+
+$h2: map-get($titulos, h2);
+
+h2 {
+    font-size: $h2;
+}
+
+.boton22{
+    background-color: $colorsecundario;
+    color:white;
+    width: 160px;
+    margin: 10px;
+    &:hover{
+    background-color: $colorsecundario2;
+    transition: background-color 1s;
+    }
+}
+.boton22--enviar{
+    @extend .boton22;
+    color: green;
+}
+
+.boton22--borrar{
+    @extend .boton22;
+    color: red;
+}
+
+@mixin cajas ($fondo, $ancho, $alto) {
+    color: $fondo;
+    width: $ancho;
+    height: $alto;
+}
+
+.caja1 {
+    @include cajas (blue, 300px, 100px);
+}
+
+.caja2 {
+    @include cajas (green, 500px, 50px);
+}
