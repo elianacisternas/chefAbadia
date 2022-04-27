@@ -1,0 +1,29 @@
+
+.fotoChef2{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: inline-block;
+    padding: 20px;
+}
+
+.parrafoChef{
+    padding: 20px;
+}
+
+.mainContenedorChef div h2{
+    font-size: 80px; 
+    text-align: left;
+    animation-name: moverTitulo2;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    color:$colorsecundario2;
+}
+
+@keyframes moverTitulo2{
+    0%{
+        transform: scale(.1);
+        color: $colorsecundario;
+        transform: rotateX(120deg);
+    }
+}
