@@ -4,7 +4,7 @@ $colorsecundario2: #808000;
 
 
 $titulos: (
-    h1: 4em,
+    h1: 3.5em,
     h2: 3em,
     h3: 2em,
     h4: 1em,
@@ -12,10 +12,40 @@ $titulos: (
     h6: 0.35em,
 );
 
+$h1: map-get($titulos, h1);
+
+h1 {
+    font-size: $h1;
+}
+
 $h2: map-get($titulos, h2);
 
 h2 {
     font-size: $h2;
+}
+
+$h3: map-get($titulos, h3);
+
+h3 {
+    font-size: $h3;
+}
+
+$h4: map-get($titulos, h4);
+
+h4 {
+    font-size: $h4;
+}
+
+$h5: map-get($titulos, h5);
+
+h5 {
+    font-size: $h5;
+}
+
+$h6: map-get($titulos, h6);
+
+h6 {
+    font-size: $h6;
 }
 
 .boton22{

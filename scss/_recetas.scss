@@ -1,0 +1,23 @@
+.contenedorReceta{
+    padding: 20px;
+    position: relative;
+    overflow: scroll;
+    width: 600px;
+    height: 1286px;
+    text-align: justify;
+    background-color:$colorsecundario2
+}
+
+
+
+.tituloRecetas{
+    color: $colorsecundario;
+}
+
+.recetaImagen img{
+    max-width: 80%;
+    height: auto;
+    object-fit:cover;
+    display: inline-block;
+    padding: 20px;
+}

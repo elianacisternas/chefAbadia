@@ -2,8 +2,13 @@
 @import "header";
 @import "footer";
 @import "chef";
+@import "recetas";
 @import "contacto";
 
+
+/* llamado por etiquetas etiqueta sin <></> */
+/* llamado a class con .class */
+/* llamado a id con #id */
 .body{
     margin: 0;
     box-sizing: border-box;
@@ -89,19 +94,7 @@ a{
         grid-row: span 2;
     }
 }
-.mainContenedorChef img{
-    animation-name: moverImagen;
-    animation-duration: 3s;
-}
 
-@keyframes moverImagen{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(4%);
-    }
-} 
 
 .tituloPortada{
     color: $colorsecundario;
@@ -125,5 +118,6 @@ a{
         letter-spacing: 8px;
     }
 }
+
 
 

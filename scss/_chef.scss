@@ -11,14 +11,32 @@
     padding: 20px;
 }
 
-.mainContenedorChef div h2{
+.mainContenedorChef {
+    img{
+    animation-name: moverImagen;
+    animation-duration: 3s;
+    }
+    div{
+        h2{
     font-size: 80px; 
     text-align: left;
     animation-name: moverTitulo2;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     color:$colorsecundario2;
+        }
+    }
 }
+
+@keyframes moverImagen{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(4%);
+    }
+} 
+
 
 @keyframes moverTitulo2{
     0%{
