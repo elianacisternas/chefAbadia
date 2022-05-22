@@ -4,16 +4,15 @@
 @import "chef";
 @import "recetas";
 @import "contacto";
+@import "catering";
+@import "asados";
 
-
-/* llamado por etiquetas etiqueta sin <></> */
-/* llamado a class con .class */
-/* llamado a id con #id */
-.body{
+*{
     margin: 0;
+    padding: 0%;
     box-sizing: border-box;
-    background-color: $colorPrincipal;
 }
+
 p{
     font-size: 16px;
     text-align: justify;
@@ -22,6 +21,7 @@ p{
 
 li{
     list-style-type: none;
+    font-size: 16px;
 }
 a{
     text-decoration: none;
@@ -31,72 +31,22 @@ a{
 }
 .main, .articulo, .footer{
     float: left;
-    width: 100%;
+}
+body{
+    background-color: $colormain;
 }
 .main{
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
-.imagenChef{
+.contenedorImagenChef{
     max-width: 100%;
-    height: auto;
-    object-fit: cover;
+    width: auto;
 }
+
 .tituloPortada{
     margin-top: 40px;
     text-align: center;
-    color: black;
-}
-.boton1{
-    background-color: $colorsecundario;
-    color: white;
-    display: inline-block;
-    position: relative;
-    width: 180px;
-    height: 25px;
-    padding: 1.875em;
-    margin: 20px;
-    text-align: center;
-    border-radius: 5px;
-    &:hover{
-    background-color: $colorsecundario2;
-    transition: background-color 1s;
-    }
-}
-.grid-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $colorPrincipal;
-    transition: transform 0.3s ease-in-out;
-    &:hover{
-    filter: opacity(0.9);
-    transform: scale(1.04);
-    }
-    img{
-    width: 100%;
-    }
-}
-.grid-containerGaleria{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    grid-auto-rows: minmax(200px, auto);
-    gap: 20px;
-    padding: 10px;
-    grid-auto-flow: dense;
-}
-
-@media screen and (min-width: 600px){
-    .wide{
-        grid-column:span 2;
-    }
-    .tall{
-        grid-row: span 2;
-    }
-}
-
-
-.tituloPortada{
     color: $colorsecundario;
     font-size: 60px;
     font-weight: 700;
@@ -119,5 +69,59 @@ a{
     }
 }
 
+.parrafo{
+    text-align: center;
+}
 
+.articulo{
+    text-align: -webkit-center
+}
 
+@media screen and (max-width: 1024px){
+    .tituloPortada{
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 6px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .tituloPortada{
+        font-size: 25px;
+        font-weight: 500;
+        letter-spacing: 6px;
+    }
+    @keyframes moverTitulo{
+        0%{
+            margin-bottom: -15px;
+        }
+        30%{
+            letter-spacing: 25px;
+        }
+        85%{
+            letter-spacing: 6px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    .tituloPortada{
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 3px;
+    }
+    @keyframes moverTitulo{
+        0%{
+            margin-bottom: -15px;
+        }
+        85%{
+            letter-spacing: 4px;
+        }
+    }
+    .conoceChef{
+        font-size: 18px;
+    }
+    .parrafo{
+        font-size: 14px;
+    }
+}

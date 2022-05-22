@@ -9,45 +9,8 @@ p{
     font-size: 16px;
     text-align: justify;
     padding: 10px;
-    /* margin: 10px; */
 }
 
-/*.grid-containerIndex{
-    display: grid;
-    background-color:#f2ede6;
-    grid-template-columns: 300px auto 100px;
-    grid-template-rows: 82px auto 250px 200px;
-    grid-template-areas: 
-    "header navegacion navegacion"
-    "main main main"
-    "articulo articulo articulo"
-    "footer footer footer";
-    gap: 0px ;
-}
-
-.grid-containerIndex > *{
-    justify-content: center;
-    text-align: center;
-    color: black;
-    border: 1px solid black;
-}
-
-.header{
-    grid-area: header;
-}
-.navegacion{
-    grid-area: navegacion;
-}
-.main{
-    grid-area: main;
-}
-.articulo{
-    grid-area: articulo;
-}
-.footer{
-    grid-area: footer;
-}
-*/
 .header, .navegacion, .main, .articulo, .footer{
     padding: 1em 2em;
 }
@@ -142,53 +105,7 @@ a{
     color: white;
 }
 
-/*TAMAÑO TABLET INDEX*/
-/*@media screen and(max-width:768px){
-    .grid-containerIndex{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "header navegacion"
-        "main main"
-        "articulo articulo"
-        "footer footer";
-    } 
-}
-*/
-/*TAMAÑO CELULAR INDEX*/
-/*@media screen and(max-width:500px){
-    .grid-containerIndex{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "header"
-        "navegacion"
-        "main"
-        "footer";
-    }
-    .header__menu{
-        flex-direction: column;
-    }
-}
-*/
-/*.grid-containerHeader{
-    display: grid;
-    grid-template-columns: 300px auto 100px;
-    grid-template-rows: 82px;
-    grid-template-areas: 
-    "header navegacion navegacion";
-    gap: 0px ;
-}
 
-.grid-contenedorFooter{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px;
-    grid-template-areas: 
-    "footer footer footer";
-    gap: 0px ;
-    justify-content: center;
-    text-align: center;
-}
-*/
 
 .grid-item{
     display: flex;
@@ -230,29 +147,6 @@ a{
     margin:auto;
 }
 
-/*.formularioContacto__form{
-    display: flex; 
-    flex-flow: column; 
-    position: relative;
-    left: 150px;
-    top: 250px;
-}
-
-.formularioContacto{
-    display: flex;
-    padding: 30px;
-    margin:auto;
-    height: 75vh; 
-}
-
-.formularioContacto__form{
-    display: flex; 
-    flex-flow: column; 
-    position: relative;
-    left: 150px;
-    top: 100px;
-    width: 300px;
-}*/
 
 .mainContenedorChef img{
     animation-name: moverImagen;

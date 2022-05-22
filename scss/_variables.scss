@@ -1,7 +1,7 @@
-$colorPrincipal:aliceblue;
+$colormain:#E3E6E4;
 $colorsecundario:#1a1918;
-$colorsecundario2: #808000;
-
+$colorsecundario2: #616100;
+$colorsecundario3:#D99559;
 
 $titulos: (
     h1: 3.5em,
@@ -61,23 +61,103 @@ h6 {
 .boton22--enviar{
     @extend .boton22;
     color: green;
-}
+}  
 
 .boton22--borrar{
     @extend .boton22;
     color: red;
 }
 
-@mixin cajas ($fondo, $ancho, $alto) {
-    color: $fondo;
-    width: $ancho;
-    height: $alto;
+.boton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 80px;
+    margin: 20px;
+    background-color: $colorsecundario;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    &:hover{
+        background-color: $colorsecundario2;
+    }
 }
 
-.caja1 {
-    @include cajas (blue, 300px, 100px);
+.boton.uno::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $colorsecundario2;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .3s ease-in-out;
 }
 
-.caja2 {
-    @include cajas (green, 500px, 50px);
+.boton.uno:hover::after{
+    top: 0;
 }
+.boton span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+    color: #fff;
+}
+
+.boton.uno.ubicacion{
+    top: 754px;
+}
+@media screen and (max-width: 1440px){
+    .boton.uno.ubicacion{
+        top: 20px;
+    }
+}
+
+.boton.uno.ubicacion2{
+    left: 400px;
+    top: 10px;
+}
+
+@media screen and (max-width: 1024px){
+    .boton.uno.ubicacion2{
+        left: 350px;
+    }
+    .boton.uno.ubicacion{
+        top: 20px;
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .boton.uno.ubicacion2{
+        left: 0%;
+        margin: 0%;
+    }
+}
+
+@media screen and (max-width: 425px)and (min-width: 100px){
+    .boton.uno{
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .ubicacion{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 425px)and (min-width: 100px){
+    .boton22{
+        width: 110px;
+    }
+}    

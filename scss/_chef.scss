@@ -1,3 +1,28 @@
+.mainContenedorChef{
+    div{
+        .holaTitulo{
+            font-size: 80px; 
+            text-align: left;
+            animation-name: moverTitulo2;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            color:$colorsecundario2;
+        }
+    }
+}
+
+@keyframes moverTitulo2{
+    0%{
+        transform: scale(.1);
+        color: $colorsecundario;
+        transform: rotateX(120deg);
+    }
+}
+
+.parrafoChef{
+    padding: 20px 40px 20px;
+    line-height:40px;
+}
 
 .fotoChef2{
     max-width: 100%;
@@ -7,41 +32,24 @@
     padding: 20px;
 }
 
-.parrafoChef{
-    padding: 20px;
+@media screen and (max-width: 768px){
+    .fotoChef2{
+        width: -webkit-fill-available;
+    }
+    .parrafoChef{
+        width: 100%;
+    }
 }
 
-.mainContenedorChef {
-    img{
-    animation-name: moverImagen;
-    animation-duration: 3s;
-    }
-    div{
-        h2{
-    font-size: 80px; 
-    text-align: left;
-    animation-name: moverTitulo2;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-    color:$colorsecundario2;
+@media screen and (max-width: 425px)and (min-width: 100px){
+    .parrafoChef{
+        font-size: 14px;
+        line-height:20px;
+        h3{
+            text-align: center;
         }
-    }
-}
-
-@keyframes moverImagen{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(4%);
-    }
-} 
-
-
-@keyframes moverTitulo2{
-    0%{
-        transform: scale(.1);
-        color: $colorsecundario;
-        transform: rotateX(120deg);
+        li{
+            font-size: 14px;
+        }
     }
 }

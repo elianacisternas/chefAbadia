@@ -1,23 +1,124 @@
 .contenedorReceta{
+    margin: 20px;
     padding: 20px;
     position: relative;
     overflow: scroll;
     width: 600px;
-    height: 1286px;
+    height: 1146px;
     text-align: justify;
-    background-color:$colorsecundario2
-}
-
-
-
-.tituloRecetas{
-    color: $colorsecundario;
+    border-radius: 20px;
+    background-color: #D99559;
+    text-align:center;
 }
 
 .recetaImagen img{
-    max-width: 80%;
-    height: auto;
+    width: 80%;
+    height: 1186px;
     object-fit:cover;
     display: inline-block;
     padding: 20px;
+    animation-name: moverImagen;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.tituloRecetas{
+    text-align: center;
+}
+
+@keyframes moverImagen{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(6%);
+    }
+} 
+.titulos{
+    font-style: italic;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1200px){
+    .contenedorReceta{
+        width: 450px;
+        border-radius: 10px;
+        p{
+            font-size: 14px;
+            text-align: justify;
+        }
+    }
+    .tituloRecetas{
+        font-size: 40px;
+    }
+    .titulos{
+        font-size: 33px;
+    }
+    .titulos2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .contenedorReceta{
+        width: 400px;
+    }
+    .recetaImagen img{
+        width: 450px;
+    }
+    .tituloRecetas{
+        font-size: 30px;
+    }
+    .titulos{
+        font-size: 22px;
+    }
+    .titulos2{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .mainRecetas{
+        justify-content: center;
+    }
+    .recetaImagen img{
+        width: 768px;
+        height: auto;
+    }
+    .contenedorReceta{
+        width: 500px;
+        height: 600px;
+    }
+    .tituloRecetas{
+        font-size: 30px;
+    }
+    .titulos{
+        font-size: 22px;
+    }
+    .titulos2{
+        font-size: 17px;
+    }
+    @keyframes moverImagen{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateY(3%);
+        }
+    } 
+}
+
+@media screen and (max-width: 375px){
+    .contenedorReceta{
+        width: 300px;
+        border-radius: 5px;
+    }
+    .tituloRecetas{
+        font-size: 25px;
+    }
+    .titulos{
+        font-size: 20px;
+    }
+    .titulos2{
+        font-size: 17px;
+    }
 }
