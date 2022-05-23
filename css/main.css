@@ -75,7 +75,7 @@ h6 {
 .boton.uno.ubicacion {
   top: 754px; }
 
-@media screen and (max-width: 2560px) {
+@media screen and (max-width: 1880px) {
   .boton.uno.ubicacion {
     top: 330px; } }
 
