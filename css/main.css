@@ -31,16 +31,6 @@ h6 {
 .boton22--borrar {
   color: red; }
 
-.caja1 {
-  color: blue;
-  width: 300px;
-  height: 100px; }
-
-.caja2 {
-  color: green;
-  width: 500px;
-  height: 50px; }
-
 .boton {
   display: inline-flex;
   align-items: center;
@@ -84,6 +74,10 @@ h6 {
 
 .boton.uno.ubicacion {
   top: 754px; }
+
+@media screen and (max-width: 2560px) {
+  .boton.uno.ubicacion {
+    top: 330px; } }
 
 @media screen and (max-width: 1440px) {
   .boton.uno.ubicacion {
@@ -427,9 +421,6 @@ h6 {
   .principalAsados p {
     font-size: 14px; } }
 
-/* llamado por etiquetas etiqueta sin <></> */
-/* llamado a class con .class */
-/* llamado a id con #id */
 * {
   margin: 0;
   padding: 0%;
@@ -464,22 +455,6 @@ body {
   max-width: 100%;
   width: auto; }
 
-/*.boton1{
-    background-color: $colorsecundario;
-    color: white;
-    display: inline-block;
-    position: relative;
-    width: 180px;
-    height: 25px;
-    padding: 1.875em;
-    margin: 20px;
-    text-align: center;
-    border-radius: 5px;
-    &:hover{
-    background-color: $colorsecundario2;
-    transition: background-color 1s;
-    }
-}*/
 .tituloPortada {
   margin-top: 40px;
   text-align: center;
